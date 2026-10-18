@@ -1,0 +1,81 @@
+{
+  "expo": {
+    "name": "Bamboo Kintsugi",
+    "slug": "bamboo-syntro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "platforms": [
+      "android"
+    ],
+    "icon": "./assets/icons/app-icon.png",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/key-art/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#1b1512"
+    },
+    "android": {
+      "package": "com.bamboosyntro.bambookintsugi",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.VIBRATE"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icons/adaptive-foreground.png",
+        "backgroundImage": "./assets/icons/adaptive-background.png",
+        "backgroundColor": "#1b1512"
+      },
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO",
+        "android.permission.READ_MEDIA_AUDIO",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "com.google.android.gms.permission.AD_ID"
+      ],
+      "allowBackup": true
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0",
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "enablePngCrunchInReleaseBuilds": true,
+            "usesCleartextTraffic": false
+          }
+        }
+      ],
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT_UP"
+        }
+      ],
+      "./plugins/withLocalWeb",
+      "./plugins/withReleaseHardening"
+    ],
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
+    "extra": {
+      "gameSlug": "kintsugi",
+      "offlineFirst": true,
+      "company": "BAMBOO SYNTRO",
+      "eas": {
+        "projectId": "7cfeba1d-eb99-43f8-8aa6-4e92987b54ff"
+      }
+    },
+    "owner": "889-893"
+  }
+}

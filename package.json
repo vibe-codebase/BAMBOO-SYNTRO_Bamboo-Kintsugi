@@ -1,0 +1,37 @@
+{
+  "name": "bamboo-syntro",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "native:typecheck": "tsc -p tsconfig.json --noEmit",
+    "web:install": "npm --prefix web install",
+    "web:dev": "npm --prefix web run dev",
+    "web:typecheck": "npm --prefix web run typecheck",
+    "web:test": "npm --prefix web run test",
+    "web:build": "npm --prefix web run build",
+    "sync:web": "node scripts/sync-web-build.mjs",
+    "validate:assets": "node scripts/validate-assets.mjs",
+    "build:game": "npm run web:build && npm run sync:web",
+    "export:android": "expo export --platform android --output-dir dist-android",
+    "eas:apk": "eas build --platform android --profile preview",
+    "eas:aab": "eas build --platform android --profile production"
+  },
+  "dependencies": {
+    "babel-preset-expo": "~56.0.20",
+    "expo": "~56.0.22",
+    "expo-build-properties": "~56.0.27",
+    "expo-screen-orientation": "~56.0.5",
+    "expo-status-bar": "~56.0.4",
+    "react": "19.2.3",
+    "react-native": "0.85.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-webview": "13.16.1"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.0",
+    "typescript": "~5.9.2"
+  }
+}
